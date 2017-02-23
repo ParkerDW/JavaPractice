@@ -1,0 +1,5 @@
+package training;
+
+public enum EnumTest {
+	HEY, HO, HI, BONJOUR, GREETINGS, SALUT
+}

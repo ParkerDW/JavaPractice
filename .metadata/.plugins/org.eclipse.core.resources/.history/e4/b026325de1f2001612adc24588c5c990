@@ -1,0 +1,22 @@
+package training;
+public class HelloWorld {
+	
+	public enum Test {
+		HEY, HO, HI, BONJOUR, GREETINGS, SALUT	
+		
+	}
+
+	private final Test enum;
+	
+	public static void main(String []args){
+		enum = new Test ;
+		System.out.println(enum);
+	}
+	
+	private static void hello(){
+		System.out.println("Hello World");
+		Greeter worldGreeter = new Greeter ("HEY GURL"); 
+		String greeting = worldGreeter.sayHello();
+		System.out.println(greeting);
+	}
+}

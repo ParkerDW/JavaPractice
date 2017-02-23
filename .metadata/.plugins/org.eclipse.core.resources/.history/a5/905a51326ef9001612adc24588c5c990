@@ -1,0 +1,109 @@
+package ca.mcgill.cs.stg.solitaire.cards;
+
+import java.util.*;
+
+public class Hand implements Iterable<Card>, Comparable<Hand>
+{
+	
+	private final List<Card> aCards = new ArrayList<Card>();
+	private final int maxCard; 
+	
+	
+	public Hand (int pMaxCards)
+	{
+		assert pMaxCards > 0;
+		this.maxCard=pMaxCards;
+	}
+
+
+	public void add(Card pCard)
+	{
+		assert pCard!=null;
+		assert !isFull();
+		aCards.add(pCard);
+	}
+	
+	public void remove(Card pCard)
+	{
+		assert pCard!=null;
+		assert !isEmpty();
+		aCards.remove(pCard);
+	}
+	
+	public boolean contains(Card pCard)
+	{
+		return aCards.contains(pCard);
+	}
+	
+	public boolean isEmpty()
+	{
+		return aCards.isEmpty();
+	}
+	
+	public int size()
+	{
+		return aCards.size();
+	}
+	
+	public boolean isFull()
+	{
+		return aCards.size() == maxCard;
+	}
+	
+	@Override
+	public Iterator<Card> iterator()
+	{
+		return aCards.iterator();
+	}
+	
+	@Override
+	public int compareTo(Hand pOtherHand)
+	{
+		return aCards.size()-pOtherHand.aHand.size();
+	}
+
+	public static Comparator<Hand> createAscendingComparator()
+	{
+		return new 
+				Comparator<Hand>() 
+				{
+					public int compare(Hand pHand1, Hand pHand2)
+					{
+						return pHand1.aCards.size()-pHand2.aCards.size();
+					}
+				};
+	}
+	
+	public static Comparator<Hand> createDescendingComparator()
+	{
+		return new
+				Comparator<Hand>()
+				{
+					public int compare(Hand pHand1, Hand pHand2)
+					{
+						return pHand2.aCards.size()-pHand1.aCards.size();
+					}
+				};
+	}
+	
+	public static void main (String[] args)
+	{
+		Hand myHand = new Hand(5);
+		Hand yourHand = new Hand(5);
+		Deck gameDeck = new Deck();
+		myHand.add(gameDeck.draw());
+		myHand.add(gameDeck.draw());
+		yourHand.add(gameDeck.draw());
+		yourHand.add(gameDeck.draw());
+		yourHand.add(gameDeck.draw());
+		yourHand.add(gameDeck.draw());
+		yourHand.add(gameDeck.draw());
+		System.out.println(myHand.compareTo(yourHand));
+		System.out.println(yourHand.compareTo(myHand));
+		System.out.println(myHand.isFull());
+		System.out.println(yourHand.isFull());
+		System.out.println(Hand.createAscendingComparator().compare(myHand, yourHand));
+		System.out.println(Hand.createDescendingComparator().compare(myHand, yourHand));
+	}
+	
+}

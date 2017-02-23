@@ -1,0 +1,20 @@
+package training;
+
+public class CircularQueueTest {
+	public static void main (String[] args){
+		int a = 3;
+		System.out.println(c);
+		/*CircularQueue cq = new CircularQueue(a);
+		int b=1;
+		int c=2;
+		int d=3;
+		int e=4;
+		
+		cq.push(b);
+		cq.push(c);
+		cq.push(d);
+		cq.push(e);
+		cq.pop();
+		cq.pop();*/
+	}
+}

@@ -1,0 +1,20 @@
+package training;
+
+public class ArrayTest {
+	
+	public static void main (String[] args){
+		/*int[] numbers = new int[10]; 
+		for (int i=0; i<numbers.length; i++){
+			numbers[i]=i+1;
+			System.out.println(numbers[i]);
+		}*/
+		Polygon p = new Polygon(new int[] {3,4,5}, new int[] {7,8,9}, 3);
+		int sides = p.getSides();
+		int[] xValue = p.getX();
+		int[] yValue = p.getY();
+		for (int x : xValue){
+			System.out.print(x);
+		}
+		System.out.println("The polygon looks like this: " + sides);
+	}
+}

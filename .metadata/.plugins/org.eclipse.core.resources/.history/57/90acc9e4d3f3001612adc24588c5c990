@@ -1,0 +1,29 @@
+package training;
+
+public class CircularQueue {
+	
+	private int[] queue1;
+	private int first;
+	private int last;
+	private int sizeOfArray;
+
+	public void circularQueue(int size){
+		this.queue1 = new int[size];
+		this.sizeOfArray = size;
+		this.first = 0;
+		this.last = 0;
+	}
+	
+	public void push(int toPush){
+		queue1[last]=toPush;
+		last = (last+1)%sizeOfArray; 
+	}
+	
+	public int pop(){
+		int popInt = queue1[first];
+		System.out.println(popInt);
+		first = (first-1)&sizeOfArray;
+		System.out.println(x);
+		return popInt;
+	}
+}

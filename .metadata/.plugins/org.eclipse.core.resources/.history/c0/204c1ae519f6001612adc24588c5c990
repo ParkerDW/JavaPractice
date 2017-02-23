@@ -1,0 +1,20 @@
+package module1;
+
+public class EnumCardTest {
+	EnumCard aCard;
+	
+	public EnumCardTest(EnumCard card){
+		this.aCard=card;
+	}
+	
+	public boolean isSuitDiamonds(){
+		EnumCard.Suit theSuit = aCard.getSuit(); 
+		return theSuit == EnumCard.Suit.DIAMONDS;
+	}
+	
+	public static void main (String[] args){
+		EnumCardTest test = new EnumCardTest(EnumCard.ACE_HEARTS);
+		System.out.println(test.aCard.getSuit());
+		System.out.println(test.aCard.getRank());
+	}
+}

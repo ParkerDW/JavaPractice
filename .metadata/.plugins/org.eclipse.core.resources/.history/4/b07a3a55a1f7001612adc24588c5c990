@@ -1,0 +1,73 @@
+package ca.mcgill.cs.stg.solitaire.cards;
+
+/**
+ * A class that represents a deck of cards composed of multiple decks
+ * of cards. This version does not implement the copy-constructor 
+ * part the exercise.
+ * 
+ * @author Parker DW
+ */
+public class MultiDeck
+{
+	
+	/**
+	 * List of decks
+	 */
+	private Deck[] aListDecks;
+	
+	
+	/**
+	 * Creates an initialized, shuffled multi-deck of cards from pNumberOfDecks deck.
+	 * 
+	 * @param pNumberOfDecks The number of decks in the multi-deck
+	 * @precondition pNumberOfDecks > 0
+	 */
+	public MultiDeck(int pNumberOfDecks){
+		assert pNumberOfDecks > 0;
+		aListDecks = new Deck[pNumberOfDecks];
+		for (int i = 0; i < pNumberOfDecks; i++){
+			aListDecks[i]=new Deck();
+			aListDecks[i].shuffle();
+		}
+	}
+	
+	public MultiDeck(Deck[] aDeck){
+		aListDecks = aDeck;
+	}
+	
+	public Card draw(){
+		for (Deck deck : aListDecks)
+		{
+			if(deck.isEmpty())
+			{
+				continue;
+			}
+			return deck.draw();
+		}
+		assert false;
+		return null;
+	}
+	
+	public MultiDeck copy()
+	{
+		Deck [] aTempMulti = new Deck[aListDecks.length];
+		for (int i = 0; i < aListDecks.length; i++)
+		{
+			aTempMulti[i] = aListDecks[i].copy();
+		}
+		return new MultiDeck(aTempMulti);
+	}
+	
+	public boolean isEmpty()
+	{
+		for (Deck deck : aListDecks)
+		{
+			if(!deck.isEmpty())
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+}

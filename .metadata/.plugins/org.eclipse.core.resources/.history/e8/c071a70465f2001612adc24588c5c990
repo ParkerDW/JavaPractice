@@ -1,0 +1,14 @@
+public class HelloWorld {
+	
+	
+	public static void main(String []args){
+		hello();
+	}
+	
+	private static void hello(){
+		System.out.println("Hello World");
+		Greeter worldGreeter = new Greeter ("HEY GURL"); 
+		String greeting = worldGreeter.sayHello();
+		System.out.println(greeting);
+	}
+}

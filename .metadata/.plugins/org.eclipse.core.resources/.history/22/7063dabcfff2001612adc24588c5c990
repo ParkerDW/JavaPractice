@@ -1,0 +1,27 @@
+package training;
+
+import java.util.*;
+
+public class LinkedListTest {
+	public static void main(String[] args){
+		LinkedList<String> aList = new LinkedList<String>();
+		aList.add("Hi");
+		aList.add("Hello");
+		aList.add("Bye");
+		
+		ListIterator<String> iterator = aList.listIterator();
+		
+		while(iterator.hasNext()){
+			//iterator.next() returns current position's content and moves iterator to next in list
+			System.out.println(iterator.next());
+		}
+		while(iterator.hasPrevious()){
+			System.out.println(iterator.previous());
+			iterator.remove();
+		}
+		if(iterator.hasNext()==false){
+			System.out.println("empty now");
+		}
+	}
+	
+}

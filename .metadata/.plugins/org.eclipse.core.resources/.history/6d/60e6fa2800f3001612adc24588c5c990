@@ -1,0 +1,14 @@
+package training;
+
+import java.util.*;
+
+public class ArrayTest {
+	
+	public static void main (String[] args){
+		int[] numbers = new int[10]; 
+		for (int n : numbers) {
+			n = n; 
+			System.out.println(n);
+		}
+	}
+}

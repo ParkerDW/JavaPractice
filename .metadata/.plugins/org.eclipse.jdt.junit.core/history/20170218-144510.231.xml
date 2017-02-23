@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestEnumCard" project="Solitaire" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="module1.TestEnumCard" time="0.001">
+    <testcase name="test" classname="module1.TestEnumCard" time="0.001"/>
+  </testsuite>
+</testrun>

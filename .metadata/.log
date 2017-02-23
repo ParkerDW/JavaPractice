@@ -1,0 +1,983 @@
+!SESSION 2017-02-07 16:04:53.193 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.net 1 0 2017-02-07 16:05:22.919
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-02-07 16:07:54.280
+!MESSAGE Connection to https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/p2.index failed on Received fatal alert: handshake_failure. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-02-07 16:07:54.728
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:243)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:456)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:456)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.epp.internal.mpc.ui.operations.AbstractProvisioningOperation.addRepositories(AbstractProvisioningOperation.java:92)
+	at org.eclipse.epp.internal.mpc.ui.operations.ProfileChangeOperationComputer.computeInstallableUnits(ProfileChangeOperationComputer.java:385)
+	at org.eclipse.epp.internal.mpc.ui.operations.ProfileChangeOperationComputer.run(ProfileChangeOperationComputer.java:165)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-02-07 16:07:54.729
+!MESSAGE Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.epp.mpc.ui 4 0 2017-02-07 16:08:01.492
+!MESSAGE The following solutions are not available: Checkstyle Plug-in 7.3.0 (id=net.sf.eclipsecs.feature.group, site=http://eclipse-cs.sourceforge.net/update/)
+
+!ENTRY org.eclipse.epp.mpc.ui 1 0 2017-02-07 16:11:55.760
+!MESSAGE Performing Marketplace install request from http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=150
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-02-07 16:11:56.292
+!MESSAGE Connection to https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/p2.index failed on Received fatal alert: handshake_failure. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-02-07 16:11:56.722
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:243)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:456)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:456)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.epp.internal.mpc.ui.operations.AbstractProvisioningOperation.addRepositories(AbstractProvisioningOperation.java:92)
+	at org.eclipse.epp.internal.mpc.ui.operations.ResolveFeatureNamesOperation.run(ResolveFeatureNamesOperation.java:46)
+	at org.eclipse.epp.internal.mpc.ui.wizards.FeatureSelectionWizardPage$4.run(FeatureSelectionWizardPage.java:398)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-02-07 16:11:56.724
+!MESSAGE Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-02-07 16:11:59.209
+!MESSAGE Connection to https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/p2.index failed on Received fatal alert: handshake_failure. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-02-07 16:11:59.643
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:243)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:456)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:456)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.epp.internal.mpc.ui.operations.AbstractProvisioningOperation.addRepositories(AbstractProvisioningOperation.java:92)
+	at org.eclipse.epp.internal.mpc.ui.operations.ProfileChangeOperationComputer.computeInstallableUnits(ProfileChangeOperationComputer.java:385)
+	at org.eclipse.epp.internal.mpc.ui.operations.ProfileChangeOperationComputer.run(ProfileChangeOperationComputer.java:165)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-02-07 16:11:59.643
+!MESSAGE Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-02-07 16:13:51.492 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Parker/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Parker/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2017-02-07 16:14:04.557
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-02-07 16:14:54.837
+!MESSAGE Connection to https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/p2.index failed on Received fatal alert: handshake_failure. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-02-07 16:14:55.277
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:243)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:456)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:456)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.ProvisioningUI.loadMetadataRepository(ProvisioningUI.java:440)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.getMetadataRepository(MetadataRepositoryElement.java:126)
+	at org.eclipse.equinox.internal.p2.ui.model.MetadataRepositoryElement.fetchChildren(MetadataRepositoryElement.java:75)
+	at org.eclipse.equinox.internal.p2.ui.model.RemoteQueriedElement.fetchDeferredChildren(RemoteQueriedElement.java:34)
+	at org.eclipse.ui.progress.DeferredTreeContentManager$1.run(DeferredTreeContentManager.java:231)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-02-07 16:14:55.278
+!MESSAGE Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2017-02-07 16:15:32.943
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2017-02-07 16:15:32.944
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-02-07 16:15:32.944
+!MESSAGE Software being installed: Extension for eclipse-cs plugin with additional Checks 1.23.0 (com.github.sevntu.checkstyle.checks.feature.feature.group 1.23.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-02-07 16:15:32.944
+!MESSAGE Missing requirement: Sevntu eclipse-cs Extension Plugin 1.23.0 (eclipsecs-sevntu-plugin 1.23.0) requires 'bundle net.sf.eclipsecs.checkstyle 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2017-02-07 16:15:32.944
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2017-02-07 16:15:32.944
+!MESSAGE From: Extension for eclipse-cs plugin with additional Checks 1.23.0 (com.github.sevntu.checkstyle.checks.feature.feature.group 1.23.0)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2017-02-07 16:15:32.944
+!MESSAGE To: eclipsecs-sevntu-plugin [1.23.0]
+
+!ENTRY org.eclipse.equinox.p2.operations 4 10053 2017-02-07 16:15:32.947
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 10053 2017-02-07 16:15:32.947
+!MESSAGE Cannot complete the install because one or more required items could not be found.
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-02-07 16:15:32.947
+!MESSAGE Software being installed: Extension for eclipse-cs plugin with additional Checks 1.23.0 (com.github.sevntu.checkstyle.checks.feature.feature.group 1.23.0)
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 0 2017-02-07 16:15:32.947
+!MESSAGE Missing requirement: Sevntu eclipse-cs Extension Plugin 1.23.0 (eclipsecs-sevntu-plugin 1.23.0) requires 'bundle net.sf.eclipsecs.checkstyle 0.0.0' but it could not be found
+!SUBENTRY 2 org.eclipse.equinox.p2.director 4 1 2017-02-07 16:15:32.947
+!MESSAGE Cannot satisfy dependency:
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2017-02-07 16:15:32.947
+!MESSAGE From: Extension for eclipse-cs plugin with additional Checks 1.23.0 (com.github.sevntu.checkstyle.checks.feature.feature.group 1.23.0)
+!SUBENTRY 3 org.eclipse.equinox.p2.director 4 0 2017-02-07 16:15:32.947
+!MESSAGE To: eclipsecs-sevntu-plugin [1.23.0]
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-02-07 16:20:16.352
+!MESSAGE Connection to https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/p2.index failed on Received fatal alert: handshake_failure. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-02-07 16:20:16.781
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/artifacts.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:243)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.getLocalFile(SimpleArtifactRepositoryFactory.java:65)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepositoryFactory.load(SimpleArtifactRepositoryFactory.java:76)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:73)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor50.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.loadRepository(CachingRepositoryManager.java:523)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.load(CompositeArtifactRepository.java:474)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.addChild(CompositeArtifactRepository.java:172)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepository.<init>(CompositeArtifactRepository.java:96)
+	at org.eclipse.equinox.internal.p2.artifact.repository.CompositeArtifactRepositoryFactory.load(CompositeArtifactRepositoryFactory.java:116)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.factoryLoad(ArtifactRepositoryManager.java:73)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor50.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Artifact.loadRepository(CachingRepositoryManager.java:523)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:104)
+	at org.eclipse.equinox.internal.p2.artifact.repository.ArtifactRepositoryManager.loadRepository(ArtifactRepositoryManager.java:100)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getLoadedArtifactRepositories(ProvisioningContext.java:160)
+	at org.eclipse.equinox.p2.engine.ProvisioningContext.getArtifactRepositories(ProvisioningContext.java:143)
+	at org.eclipse.equinox.internal.p2.engine.DownloadManager.start(DownloadManager.java:91)
+	at org.eclipse.equinox.internal.p2.engine.phases.Collect.completePhase(Collect.java:104)
+	at org.eclipse.equinox.internal.p2.engine.Phase.postPerform(Phase.java:251)
+	at org.eclipse.equinox.internal.p2.engine.Phase.perform(Phase.java:101)
+	at org.eclipse.equinox.internal.p2.engine.PhaseSet.perform(PhaseSet.java:47)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:75)
+	at org.eclipse.equinox.internal.p2.engine.Engine.perform(Engine.java:44)
+	at org.eclipse.equinox.p2.operations.ProvisioningSession.performProvisioningPlan(ProvisioningSession.java:175)
+	at org.eclipse.equinox.p2.operations.ProfileModificationJob.runModal(ProfileModificationJob.java:79)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-02-07 16:20:16.782
+!MESSAGE Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/artifacts.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-02-07 16:20:42.841 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/Parker/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/Users/Parker/Documents/W303/ -product org.eclipse.epp.package.java.product -keyring /Users/Parker/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 0 2017-02-07 16:20:48.929
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-02-07 16:20:48.929
+!MESSAGE Commands should really have a category: plug-in='net.sf.eclipsecs.ui', id='CheckstylePlugin.PurgeCaches', categoryId='net.sf.eclipsecs'
+
+!ENTRY org.eclipse.ui 2 0 2017-02-07 16:20:49.483
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-02-07 16:20:49.483
+!MESSAGE Commands should really have a category: plug-in='net.sf.eclipsecs.ui', id='CheckstylePlugin.PurgeCaches', categoryId='net.sf.eclipsecs'
+
+!ENTRY org.eclipse.core.net 1 0 2017-02-07 16:20:51.663
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+!SESSION 2017-02-07 16:28:34.364 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/Parker/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data file:/Users/Parker/Documents/W303/ -product org.eclipse.epp.package.java.product -keyring /Users/Parker/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 0 2017-02-07 16:28:38.976
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-02-07 16:28:38.977
+!MESSAGE Commands should really have a category: plug-in='net.sf.eclipsecs.ui', id='CheckstylePlugin.PurgeCaches', categoryId='net.sf.eclipsecs'
+
+!ENTRY org.eclipse.ui 2 0 2017-02-07 16:28:39.543
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-02-07 16:28:39.543
+!MESSAGE Commands should really have a category: plug-in='net.sf.eclipsecs.ui', id='CheckstylePlugin.PurgeCaches', categoryId='net.sf.eclipsecs'
+
+!ENTRY org.eclipse.core.net 1 0 2017-02-07 16:28:40.960
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-02-07 16:29:30.006
+!MESSAGE Exception caught during execution of ls-remote command
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: Exception caught during execution of ls-remote command
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:217)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:159)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:100)
+	at org.eclipse.egit.ui.internal.clone.SourceBranchPage$8.run(SourceBranchPage.java:341)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Caused by: org.eclipse.jgit.errors.NotSupportedException: URI not supported: ttps://github.com/prmr/COMP303Starter
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:573)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:322)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:292)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:186)
+	... 4 more
+!SESSION 2017-02-09 13:59:52.053 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Parker/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Parker/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 0 2017-02-09 14:00:08.079
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-02-09 14:00:08.079
+!MESSAGE Commands should really have a category: plug-in='net.sf.eclipsecs.ui', id='CheckstylePlugin.PurgeCaches', categoryId='net.sf.eclipsecs'
+
+!ENTRY org.eclipse.ui 2 0 2017-02-09 14:00:09.583
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-02-09 14:00:09.583
+!MESSAGE Commands should really have a category: plug-in='net.sf.eclipsecs.ui', id='CheckstylePlugin.PurgeCaches', categoryId='net.sf.eclipsecs'
+
+!ENTRY org.eclipse.core.net 1 0 2017-02-09 14:00:11.512
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2017-02-14 13:58:28.256
+!MESSAGE Full project indexing required:
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/charsets.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jaccess.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jfxrt.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/localedata.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/nashorn.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunec.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jce.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jfr.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jsse.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/resources.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+  [+] /System/Library/Java/Extensions/MRJToolkit.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2017-02-16 12:55:20.550
+!MESSAGE Full project indexing required:
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/charsets.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jaccess.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jfxrt.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/localedata.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/nashorn.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunec.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jce.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jfr.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jsse.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/resources.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+  [+] /System/Library/Java/Extensions/MRJToolkit.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2017-02-18 14:38:18.223
+!MESSAGE Full project indexing required:
+  [+] /Users/Parker/.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar
+  [+] /Users/Parker/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.suggestRebuild(ProjectTypesIndex.java:444)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.rebuildIndex(TypesIndexService.java:120)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.process(TypesIndexService.java:57)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.process(TypesIndexService.java:63)
+	at org.eclipse.recommenders.internal.types.rcp.TypesIndexService.elementChanged(TypesIndexService.java:49)
+	at org.eclipse.jdt.internal.core.DeltaProcessor$3.run(DeltaProcessor.java:1662)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.notifyListeners(DeltaProcessor.java:1652)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.firePostChangeDelta(DeltaProcessor.java:1486)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.fire(DeltaProcessor.java:1462)
+	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2074)
+	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2253)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:128)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:437)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:353)
+	at org.eclipse.jface.wizard.WizardDialog.run(WizardDialog.java:993)
+	at org.eclipse.ui.internal.progress.ProgressManager$RunnableWithStatus.run(ProgressManager.java:1242)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.progress.ProgressManager$5.run(ProgressManager.java:1092)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:145)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4814)
+	at org.eclipse.ui.internal.progress.ProgressManager.runInUI(ProgressManager.java:1089)
+	at org.eclipse.jdt.internal.junit.wizards.JUnitWizard.finishPage(JUnitWizard.java:66)
+	at org.eclipse.jdt.internal.junit.wizards.NewTestCaseCreationWizard.performFinish(NewTestCaseCreationWizard.java:121)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:790)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:423)
+	at org.eclipse.jface.dialogs.Dialog$2.widgetSelected(Dialog.java:618)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1501)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1509)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1313)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4080)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3706)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.internal.actions.NewWizardShortcutAction.run(NewWizardShortcutAction.java:133)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4256)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1501)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1524)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1509)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:1313)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4080)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3706)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2017-02-20 11:49:13.521
+!MESSAGE Full project indexing required:
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/charsets.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/dnsns.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jaccess.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/jfxrt.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/localedata.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/nashorn.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunec.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/ext/zipfs.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jce.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jfr.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jsse.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/resources.jar
+  [+] /Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar
+  [+] /System/Library/Java/Extensions/MRJToolkit.jar
+  [+] /Users/Parker/.p2/pool/plugins/org.hamcrest.core_1.3.0.v201303031735.jar
+  [+] /Users/Parker/.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:169)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-02-22 18:32:45.026
+!MESSAGE Connection to https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/p2.index failed on Received fatal alert: handshake_failure. Retry attempt 0 started
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.writeRecord(SSLSocketImpl.java:747)
+	at sun.security.ssl.AppOutputStream.write(AppOutputStream.java:123)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flushBuffer(AbstractSessionOutputBuffer.java:159)
+	at org.apache.http.impl.io.AbstractSessionOutputBuffer.flush(AbstractSessionOutputBuffer.java:166)
+	at org.apache.http.impl.AbstractHttpClientConnection.doFlush(AbstractHttpClientConnection.java:272)
+	at org.apache.http.impl.AbstractHttpClientConnection.flush(AbstractHttpClientConnection.java:277)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.flush(AbstractClientConnAdapter.java:201)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:239)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2017-02-22 18:32:45.472
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:243)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor121.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:456)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor121.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:117)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:196)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:456)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:74)
+Caused by: javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.equinox.p2.transport.ecf 4 1002 2017-02-22 18:32:45.479
+!MESSAGE Unable to read repository at https://sourceforge.net/projects/eclipse-cs/files/updatesite/7.3.0/content.xml.
+!STACK 0
+javax.net.ssl.SSLHandshakeException: Received fatal alert: handshake_failure
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:154)
+	at sun.security.ssl.SSLSocketImpl.recvAlert(SSLSocketImpl.java:2023)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1125)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:535)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.SNIAwareHttpClient$1.connectSocket(SNIAwareHttpClient.java:63)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:403)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

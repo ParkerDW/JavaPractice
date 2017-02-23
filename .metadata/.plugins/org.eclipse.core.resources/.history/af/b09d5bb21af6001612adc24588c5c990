@@ -1,0 +1,18 @@
+package module1;
+
+public class EnumCardTest {
+	EnumCard aCard;
+	
+	public EnumCardTest(EnumCard card){
+		this.aCard=card;
+	}
+		
+	public static void main (String[] args){
+		EnumCardTest test = new EnumCardTest(EnumCard.ACE_HEARTS);
+		if(test.aCard.getSuit()==EnumCard.Suit.HEARTS){
+			System.out.println("works");
+		}
+		System.out.println(test.aCard.getSuit());
+		System.out.println(test.aCard.getRank());
+	}
+}

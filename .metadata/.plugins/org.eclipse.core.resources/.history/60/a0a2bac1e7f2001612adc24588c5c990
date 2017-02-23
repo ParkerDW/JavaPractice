@@ -1,0 +1,38 @@
+package training;
+import java.util.*;
+
+public class HelloWorld {
+	
+	
+	public enum Test {
+		ONE, TWO, THREE, FOUR
+	}
+	
+	public static String hey = "Hello";
+	
+	public static void main(String[] args){
+		int isIt = hey.compareTo("Ho");
+		System.out.println(isIt);
+		ArrayList<String> crapola = new ArrayList<String>();
+		crapola.add(hey);
+		System.out.println(crapola.get(0));
+	}
+	/*public enum Test {
+		HEY, HO, HI, BONJOUR, GREETINGS, SALUT	
+		
+	}
+
+	private final Test enum;
+	
+	public static void main(String []args){
+		enum = new Test;
+		System.out.println(enum);
+	}*/
+	
+/*	private static void hello(){
+		System.out.println("Hello World");
+		Greeter worldGreeter = new Greeter ("HEY GURL"); 
+		String greeting = worldGreeter.sayHello();
+		System.out.println(greeting);
+	}*/
+}

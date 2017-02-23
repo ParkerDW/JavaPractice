@@ -1,0 +1,66 @@
+package ca.mcgill.cs.stg.solitaire.cards;
+
+import java.util.*;
+
+public class Hand implements Iterable<Card>, Comparable<Hand>, Comparator<Hand>
+{
+	
+	private final List<Card> aHand = new ArrayList<Card>();
+	private final int maxCard; 
+	
+	
+	public Hand (int pMaxCards)
+	{
+		assert pMaxCards > 0;
+		this.maxCard=pMaxCards;
+	}
+
+
+	public void add(Card pCard)
+	{
+		assert pCard!=null;
+		assert !isFull();
+		aHand.add(pCard);
+	}
+	
+	public Card remove(Card pCard)
+	{
+		assert pCard!=null;
+		assert !isEmpty();
+		aHand.remove(pCard);
+	}
+	
+	public boolean contains(Card pCard)
+	{
+		return aHand.contains(pCard);
+	}
+	
+	public boolean isEmpty()
+	{
+		return aHand.isEmpty();
+	}
+	
+	public int size()
+	{
+		return aHand.size();
+	}
+	
+	public boolean isFull()
+	{
+		return aHand.size() == maxCard;
+	}
+	
+	@Override
+	public Iterator<Card> iterator()
+	{
+		return aHand.iterator();
+	}
+	
+	@Override
+	public int compareTo(Hand pOtherHand)
+	{
+		return aHand.size()-pOtherHand.size();
+	}
+
+	
+}
